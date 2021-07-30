@@ -1,6 +1,13 @@
+const express = require('express');
+const app = express();
 
-const app = () => {
-    console.log('SERVER APP RUNS!');
-};
+app.get('/api/add', (req, res) => {
+    const {query: {a, b}} = req;
+    const result = Number(a) + Number(b);
+
+    res
+        .status(200)
+        .send(result.toString());
+});
 
 module.exports = app;
