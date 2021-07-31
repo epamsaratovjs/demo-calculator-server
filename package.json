@@ -12,7 +12,7 @@
     "url": "git+https://github.com/epamsaratovjs/demo-calculator-server.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vitalii Antonov <vitalii_antonov@epam.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/epamsaratovjs/demo-calculator-server/issues"
