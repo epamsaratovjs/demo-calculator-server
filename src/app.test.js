@@ -29,5 +29,19 @@ describe('GET /api/add', () => {
                 expect(text).toBe(result.toString());
             });
     });
+
+    it('Add positive and negative numbers', async () => {
+        const a = 1;
+        const b = -2;
+        const result = -1;
+
+        await request(app)
+            .get('/api/add')
+            .query({a, b})
+            .expect(200)
+            .then(({text}) => {
+                expect(text).toBe(result.toString());
+            });
+    });
 })
 
