@@ -15,5 +15,19 @@ describe('GET /api/add', () => {
                 expect(text).toBe(result.toString());
             });
     });
+
+    it('Add negative numbers', async () => {
+        const a = -1;
+        const b = -2;
+        const result = -3;
+
+        await request(app)
+            .get('/api/add')
+            .query({a, b})
+            .expect(200)
+            .then(({text}) => {
+                expect(text).toBe(result.toString());
+            });
+    });
 })
 
